@@ -1,0 +1,52 @@
+<div id="ninegriditem" style="width: 100%;min-height: 0px;" >
+    <block if="{{isFullStyle}}">
+        <div style="position:relative;
+                width: 100%;min-height: 0px; height: {{mNineGridHeight}}px
+                "
+                >
+            <block for="{{imgDatas}}">
+                <stack style=" position: absolute;
+                                left: {{$item.positionX}};
+                                top:  {{$item.positionY}};
+                                width: {{$item.width}};
+                                height: {{$item.height}};
+                        "
+                       on:touchstart.bubble ="itemTouchStart({{$idx}},{{$item}})"
+                       on:touchmove.bubble="itemTouchMove({{$idx}},{{$item}})"
+                       on:touchcancel.bubble="itemTouchCancel({{$idx}},{{$item}})"
+                       on:touchend.bubble="itemTouchEnd({{$idx}},{{$item}})"
+                       grab:click.bubble ="itemClick1({{$idx}},{{$item}})"
+                       grab:longpress.bubble ="itemLongPress1({{$idx}},{{$item}})"
+                        >
+                <image style="width: 100%; height: 100%;"
+                       src="{{$item.imageUrls}}"
+                        ></image>
+                </stack>
+            </block>
+        </div>
+    </block>
+    <block if="{{isGridStyle}}">
+        <div style="position:relative;
+                width: 100%;min-height: 0px; height: {{mNineGridHeight}}px
+                ">
+            <block for="{{imgDatas}}">
+                <stack style=" position: absolute;
+                                left: {{$item.positionX}};
+                                top:  {{$item.positionY}};
+                                width: {{$item.width}};
+                                height: {{$item.height}};"
+                       on:touchstart.bubble ="itemTouchStart({{$idx}},{{$item}})"
+                       on:touchmove.bubble="itemTouchMove({{$idx}},{{$item}})"
+                       on:touchcancel.bubble="itemTouchCancel({{$idx}},{{$item}})"
+                       on:touchend.bubble="itemTouchEnd({{$idx}},{{$item}})"
+                       grab:click.bubble ="itemClick1({{$idx}},{{$item}})"
+                       grab:longpress.bubble ="itemLongPress1({{$idx}},{{$item}})"
+                        >
+                <image style="width: 100%; height: 100%;"
+                       src="{{$item.imageUrls}}"
+                        ></image>
+                </stack>
+            </block>
+        </div>
+    </block>
+</div>

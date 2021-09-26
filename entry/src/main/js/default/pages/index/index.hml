@@ -1,0 +1,12 @@
+<div class="container">
+    <text class="title">
+        {{title}}
+    </text>
+    <list style="background-color: aquamarine;" >
+        <block for="{{pageNames}}">
+        <list-item  onClick="listClicked({{$item.uri}})">
+            <text>{{$item.name}}</text>
+        </list-item>
+    </block>
+    </list>
+</div>

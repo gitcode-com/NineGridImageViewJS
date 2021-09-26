@@ -1,0 +1,22 @@
+<element name='ninegridview' src='../../common/ninegridview/NineGridView.hml'></element>
+
+<div class="container">
+
+    <list style="background-color : aquamarine;" divider="true" cachedcount="20"  >
+        <block for="{{ listBean }}">
+
+            <list-item class="item" style="width: 100%;min-height: 0px;"   >
+
+                <ninegridview item-value ="{{$item}}"
+                              item-index="{{$idx}}"
+                              @item-press1="itemPressNineGrid"
+                        ></ninegridview>
+
+            </list-item>
+
+
+
+
+        </block>
+    </list>
+</div>

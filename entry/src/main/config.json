@@ -1,0 +1,61 @@
+{
+  "app": {
+    "bundleName": "com.zls.ninegridimageviewjs",
+    "vendor": "zls",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    },
+
+    "type": "normal"
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.zls.ninegridimageview",
+    "name": ".MyApplication",
+    "mainAbility": "com.zls.ninegridimageview.MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "installationFree": true,
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry"
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "name": "com.zls.ninegridimageview.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index",
+          "pages/page2/page2",
+          "pages/page3/page3"
+        ],
+        "name": "default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
+      }
+    ]
+  }
+}
